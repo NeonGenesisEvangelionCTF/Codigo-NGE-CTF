@@ -1,0 +1,163 @@
+/*!
+ * =====================================================
+ * Neon Genesis Evangelion CTF
+ * Autor: Óscar Martínez Soria <martinezsoriaoscar24@gmail.com>
+ * Versión: 1.0.0
+ * Fecha: 2025
+  * Proyecto final de ASIR - CIFP Nº1 Cuenca (2023/25)*
+ * =====================================================
+ */
+/* Fuentes descargadas */
+@font-face {
+    font-family: 'Orbitron';
+    src: url('./fonts/Orbitron/Orbitron-Regular.ttf') format('truetype');
+    font-weight: 400; 
+    font-style: normal;
+    font-display: swap; /* Optimiza la visualización mientras carga */
+}
+
+@font-face {
+    font-family: 'Orbitron';
+    src: url('./fonts/Orbitron/Orbitron-Bold.ttf') format('truetype');
+    font-weight: 700; 
+    font-style: normal;
+    font-display: swap; /* Optimiza la visualización mientras carga */
+}
+
+/* Estilos del body */
+body {
+    font-family: 'Courier New', monospace; 
+    background-color: #0a0a0a; 
+    color: #e0e0e0; 
+    margin: 0; 
+    padding: 0; 
+    line-height: 1.6; /* Espaciado entre líneas */
+}
+
+/* Efecto de líneas de escaneo (simula pantalla CRT) */
+.scanlines {
+    position: fixed; /* Fija la posición en la pantalla */
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%; 
+    background: repeating-linear-gradient( /* Crea el patrón de líneas */
+        0deg, 
+        rgba(0, 0, 0, 0.15), 
+        rgba(0, 0, 0, 0.15) 1px, 
+        transparent 1px, /* Espacio transparente */
+        transparent 2px /* Distancia entre líneas */
+    );
+    pointer-events: none; /* Permite interactuar con elementos debajo */
+    z-index: -1; /* Coloca detrás del contenido */
+}
+
+/* Menú */
+nav {
+    background-color: #111; 
+    padding: 1rem; 
+    border-bottom: 2px solid #ff0000; 
+}
+
+/* Lista de navegación */
+nav ul {
+    display: flex; /* Diseño flexible */
+    justify-content: center; /* Centra los elementos */
+    list-style: none; /* Elimina viñetas */
+    padding: 0; /* Elimina relleno */
+    margin: 0; /* Elimina márgenes */
+}
+
+/* Elementos de la lista */
+nav li {
+    margin: 0 1rem; /* Márgenes laterales */
+}
+
+/* Enlaces de navegación */
+nav a {
+    color: #ff0000; 
+    text-decoration: none; /* Sin subrayado */
+    font-family: 'Orbitron', sans-serif; 
+    font-weight: bold; 
+    text-transform: uppercase; /* El texto en mayúsculas */
+}
+
+nav a:hover {
+    text-shadow: 0 0 5px #ff0000; 
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 900px; 
+    margin: 2rem auto; 
+    padding: 0 1rem; 
+}
+
+/* Títulos */
+h1, h2 {
+    font-family: 'Orbitron', sans-serif; 
+    color: #ff0000; 
+    border-bottom: 1px dashed #ff0000; 
+    padding-bottom: 0.5rem; 
+}
+
+/* Esto añade corchetes a los títulos */
+h1::before, h2::before {
+    content: "[ "; /* Corchete de apertura */
+}
+
+h1::after, h2::after {
+    content: " ]"; /* Corchete de cierre */
+}
+
+/* Contenedor de imágenes */
+.img-container {
+    text-align: center; 
+    margin: 1rem 0; 
+}
+
+/* Estilos para imágenes */
+.img-container img {
+    max-width: 100%; 
+    border: 1px solid #ff0000; 
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.3); 
+}
+
+/* Estilos de los personajes */
+.character-card {
+    background-color: #111; 
+    border: 1px solid #333; 
+    padding: 1rem; 
+    margin-bottom: 1rem; 
+}
+
+/* Títulos en tarjetas */
+.character-card h3 {
+    color: #ff0000; 
+    margin-top: 0; 
+}
+
+/* Footer */
+footer {
+    text-align: center; 
+    padding: 1rem; 
+    background-color: #111; 
+    border-top: 1px solid #ff0000; 
+    margin-top: 2rem; 
+}
+
+/* Link que parece un error */
+.broken-link {
+    display: inline-block; 
+    color: #ff5555 !important; 
+    text-decoration: none; 
+    margin-top: 0.5rem; 
+    animation: glitch 1s infinite; /* Creo una animación continua e infinita cada segundo */
+}
+
+/* Animación de fallo visual */
+@keyframes glitch {
+    0% { opacity: 0.7; } /* Lo hago semi-transparente */
+    50% { opacity: 0.3; text-decoration: line-through; } /* Hago que sea un tachado */
+    100% { opacity: 0.7; } /* Vuelve al inicio */
+}

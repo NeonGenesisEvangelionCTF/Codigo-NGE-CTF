@@ -1,0 +1,171 @@
+/*!
+ * =====================================================
+ * Neon Genesis Evangelion CTF
+ * Autor: Óscar Martínez Soria <martinezsoriaoscar24@gmail.com>
+ * Versión: 1.0.0
+ * Fecha: 2025
+  * Proyecto final de ASIR - CIFP Nº1 Cuenca (2023/25)*
+ * =====================================================
+ */
+/* Importo la fuente 'Rajdhani' (similar a los títulos de la serie) */
+@font-face {
+    font-family: 'Rajdhani';
+    src: url('../fonts/Rajdhani/Rajdhani-Regular.ttf') format('truetype');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'Rajdhani';
+    src: url('../fonts/Rajdhani/Rajdhani-Bold.ttf') format('truetype');
+    font-weight: 700;
+}
+
+html { height: 100%; }
+
+/* Estilos del body */
+body {
+    background-color: #0d0d12; 
+    color: #e3e3e3;           
+    font-family: 'Rajdhani', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0; 
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex; /* Juego con Display Flex para organizar todos los elementos*/
+    flex-direction: column;
+}
+
+/* Títulos */
+h1, h3 {
+    color: #e50914;           /* Rojo sangre de la serie */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 20px 0;
+    text-shadow: 0 0 5px rgba(229, 9, 20, 0.7);
+}
+
+h2 {
+    color: #ff9900;          /* Naranja de los trajes de los pilotos */
+}
+
+/* Pie de página */
+footer {
+    background-color: rgba(13, 13, 18, 0.9);
+    padding: 15px;
+    border-top: 1px solid #e50914;
+    font-size: 0.9rem;
+    margin-top: auto;
+}
+
+/* Contenedores */
+.contenedor {
+    background-color: rgba(13, 13, 18, 0.9); /* Creo un fondo semi-transparente */
+    border: 1px solid #e50914;
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(229, 9, 20, 0.5);
+}
+
+.caja-bandera {
+    background-color: rgba(25, 25, 35, 0.8); /* Fondo grisáceo igual */
+    border: 1px solid #4dff4d;              
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(77, 255, 77, 0.3);
+}
+
+/* Botones y enlaces */
+button, a {
+    background: linear-gradient(to bottom, #e50914, #b2070f); /* Creo un color rojo degradado */
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    margin: 10px;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s;
+    letter-spacing: 1px;
+}
+
+button:hover, a:hover { /* Hago que con el hover de la sensación de que se ilumine*/
+    background: linear-gradient(to bottom, #ff3300, #e50914);
+    box-shadow: 0 0 15px rgba(229, 9, 20, 0.7);
+}
+
+/* Campos de entrada */
+input {
+    background-color: rgba(45, 45, 55, 0.8);
+    color: #4dff4d;          
+    border: 1px solid #4dff4d;
+    padding: 10px 15px;
+    margin: 10px 0;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 16px;
+    width: 80%;
+    max-width: 400px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #e50914;
+    box-shadow: 0 0 10px rgba(229, 9, 20, 0.5);
+}
+
+/* Mensajes de las flags */
+.mensaje-correcto {
+    color: #4dff4d;          /* Verde NERV para aciertos */
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(77, 255, 77, 0.7);
+}
+
+.mensaje-error {
+    color: #e50914;          /* Rojo para errores */
+    font-weight: bold;
+}
+
+.mensaje-pista {
+    color: #ff9900;          /* Naranja para pistas */
+    font-style: italic;
+    border-left: 3px solid #ff9900;
+    padding-left: 10px;
+    margin: 10px 0;
+}
+
+/* Botón de la página banderas */
+.boton-puntuacion-banderas {
+    background: linear-gradient(to bottom, #e50914, #b2070f);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: bold;
+    display: inline-block;
+}
+
+/* Botón página puntuacion.php */
+.boton-volver {
+    background: linear-gradient(to bottom, #4dff4d, #00cc00);
+    color: #0a001a;
+    border: none;
+    padding: 10px 20px;
+    margin: 20px;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: bold;
+}
+
+/* Enlace para completado (solo visible con todas las banderas completas) */
+.enlace-completado {
+    background: linear-gradient(to bottom, #e50914, #b2070f);
+    color: white;
+    padding: 12px 25px;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-top: 15px;
+}
