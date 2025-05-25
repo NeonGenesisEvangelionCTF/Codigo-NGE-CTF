@@ -1,0 +1,19 @@
+*Creación de la base de datos*
+CREATE DATABASE nge_ctf;
+
+*Usar base de datos creada*
+USE nge_ctf;
+
+*Creación de la tabla*
+CREATE TABLE jugadores (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(50) NOT NULL,
+    flags_completadas INT DEFAULT 0,
+    ultima_actualizacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+*Creación de usuario*
+CREATE USER 'ctf_user'@'localhost' IDENTIFIED BY 'Pass123';
+GRANT SELECT, INSERT, UPDATE ON nge_ctf.* TO 'ctf_user'@'localhost';
+FLUSH PRIVILEGES;
+
