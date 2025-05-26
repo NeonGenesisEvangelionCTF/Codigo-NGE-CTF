@@ -23,7 +23,8 @@ Una vez evaluado el proyecto, el repositorio pasará a ser **privado**.
 
 - Código fuente de la web
 - Código fuente de la plataforma de registro
-- Scripts de Python de Cifrado César
+- Código SQL y scripts que generan el .sql de la copia de seguridad
+- Script de Python de Cifrado César
 - Documento del proyecto
 - Logos del proyecto
 - Parte de empresas
